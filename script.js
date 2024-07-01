@@ -6,7 +6,7 @@ const date = document.querySelector(".date");
 const weatherIcon = document.querySelector(".icon");
 const weatherCondition = document.querySelector(".condition");
 const form = document.querySelector("#locationInput");
-const input = document.querySelector(".search");
+const search = document.querySelector(".search");
 const btn = document.querySelector(".submit");
 const cities = document.querySelectorAll(".city");
 const cloudy = document.querySelector(".cloud");
@@ -144,8 +144,12 @@ function fetchWeather () {
         }
         app.style.opacity = "1"
     })
-
+    .catch(()=> {
+        alert("City not found, please try again");
+        app.style.opacity = "1";
+    })
     
 }
 
 fetchWeather();
+app.style.opacity = "1"

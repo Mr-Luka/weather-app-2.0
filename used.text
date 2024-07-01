@@ -1,0 +1,31 @@
+basic html
+basic css
+
+javascript:
+
+1) let   - defined Default city when the page loads
+2) .forEach  - Add click event to each city in the panel using
+3) Change from default city to the clicked one
+4) fade out the app (simple animation) (app.style.opacity = "0")
+5) Submit event to the form 
+6) Function that returns a day of the week (Monday, Tuesday, Friday)... from a date
+7) Function that fetches and displays the data from the weather API
+8) Fetch the data and dynamicaly add the city name with template literals.
+9) Taking the data (which is in JSON format) and converting it to a JavaScript object
+10) console logging the data to see what is available
+11) adding the Temperature and weather condition to the page
+12)  Getting the data and time from the city and extract the date, month, year and time into individual variables.
+13) Reformat the date into something more appealing add it to the page
+      original: 2024-06-27 17:53
+      New format: 17:53 - Thursday 27, 06 2024
+14) Add the name of the city into the page
+15) Getting the corresponding icon url for the weather and extract a part of it.
+16) Reformat the icon url to your own local folder path and add it to the page.
+17) Add the weather details to the page
+18) Set default time of day
+19) Get the unique id for each weather condition;
+20) Change to night if its night time in the city.
+21) Set the background image to clear if the weather is clear
+22) Change the button bg color depending on if its day or night.
+23)same thing for cloudy, rain and snow
+24) catch the error
