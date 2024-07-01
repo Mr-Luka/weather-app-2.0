@@ -49,3 +49,27 @@ function dayOfTheWeek (day, month, year) {
     return weekday[new Date(`${day}/${month}/${year}`).getDay()]
 }
 
+function fetchWeather () {
+    fetch(`http://api.weatherapi.com/v1/current.json?key=2dff0dc594da402c997192633242706&q=${cityInput}`)
+    .then(response => response.json())
+    .then(data=> {
+        console.log(data);
+
+        temp.innerHTML = data.current.temp_f;
+        weatherCondition.innerHTML = data.current.text;
+
+        const date = data.location.localtime;
+        const y = parseInt(date.substr(0, 4));
+        const m = parseInt(date.substr(5, 2));
+        const d = parseInt(date.substr(8, 2));
+        const time = date.substr(11);
+
+        date.innerHTML = `${dayOfTheWeek(m, d, y)}`;
+        time.innerHTML = time;
+        cityName.innerHTML = data.location.name;
+    })
+
+    
+}
+
+fetchWeather();
