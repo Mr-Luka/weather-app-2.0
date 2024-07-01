@@ -5,7 +5,7 @@ const time = document.querySelector(".time");
 const date = document.querySelector(".date");
 const weatherIcon = document.querySelector(".icon");
 const weatherCondition = document.querySelector(".condition");
-const form = document.querySelector("#localInput");
+const form = document.querySelector("#locationInput");
 const input = document.querySelector(".search");
 const btn = document.querySelector(".submit");
 const cities = document.querySelectorAll(".city");
@@ -24,3 +24,15 @@ cities.forEach(city => {
     })
 })
 
+form.addEventListener("submit", e=> {
+    if (search.value.lenght == 0) {
+        alert("Please enter a city name");
+    } else {
+        cityInput = search.value;
+        fetchWeather();
+        search.value = "";
+        app.style.opacity = "0";
+    }
+    e.preventDefault();
+    
+})
