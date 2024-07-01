@@ -14,5 +14,13 @@ const humidity = document.querySelector(".humidity");
 const wind = document.querySelector(".wind");
 
 
+let cityInput = "Los Angeles";
 
+cities.forEach(city => {
+    city.addEventListener("click", e => {
+        cityInput = e.target.innerHTML;
+        fetchWeather()
+        app.style.opacity= "0";
+    })
+})
 
