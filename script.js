@@ -53,7 +53,7 @@ function fetchWeather () {
     fetch(`https://api.weatherapi.com/v1/current.json?key=2dff0dc594da402c997192633242706&q=${cityInput}`)
     .then(response => response.json())
     .then(data=> {
-        console.log(data);
+        // console.log(data);
 
         temp.innerHTML = data.current.temp_f;
         weatherCondition.innerHTML = data.current.condition.text;
